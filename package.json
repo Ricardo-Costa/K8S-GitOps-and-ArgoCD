@@ -1,0 +1,23 @@
+{
+  "name": "K8S-GitOps-and-ArgoCD",
+  "version": "1.0.0",
+  "description": "K8S-GitOps-and-ArgoCD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ricardo-Costa/K8S-GitOps-and-ArgoCD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ricardo-Costa/K8S-GitOps-and-ArgoCD/issues"
+  },
+  "homepage": "https://github.com/Ricardo-Costa/K8S-GitOps-and-ArgoCD#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
