@@ -8,4 +8,4 @@ namespace: nodeapp
 
 images:
 - name: ricardocosta94/kga
-  newTag: 860eed88d18c88be9ec9a2c2ce26948e36b6af55
+  newTag: 7ddaffdb7b41448c6d9d01b548351d03f3ee089c
