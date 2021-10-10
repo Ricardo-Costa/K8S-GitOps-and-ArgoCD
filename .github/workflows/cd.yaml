@@ -37,12 +37,12 @@ jobs:
           kustomize edit set image ricardocosta94/kga:${github.sha}
           cat kustomization.yaml
 
-        - name: commit
-          run: |
-            git config --local user.name "Deploy Action"
-            git config --local user.email "action@github.com"
-            git commit -am "Set image tag to `${github.sha}`"
+      - name: commit
+        run: |
+          git config --local user.name "Deploy Action"
+          git config --local user.email "action@github.com"
+          git commit -am "Set image tag to `${github.sha}`"
 
-        - name: push
-          uses: ad-m/github-push-action@master
+      - name: push
+        uses: ad-m/github-push-action@master
 
