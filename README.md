@@ -6,6 +6,7 @@ K8S-GitOps-and-ArgoCD
 - Kubernetes [ https://kubernetes.io/docs/tasks/tools/ ]
 - Kind [ https://kind.sigs.k8s.io/docs/user/quick-start ]
 - Kustomize [ https://kubectl.docs.kubernetes.io/installation/kustomize/binaries/ ]
+- Argo CD [ https://argo-cd.readthedocs.io/en/stable/getting_started/ ]
 
 ### Build docker image
 ```
@@ -40,4 +41,29 @@ kubectl port-forward svc/nodeapp 3000:3000
 ### Kustomize auto generate kubernetes manifest
 ```
 cd k8s && kustomize build
+```
+
+### Argo CD steps
+```
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+```
+> More details at: https://argo-cd.readthedocs.io/en/stable/getting_started/
+
+### Delete old deploy and service
+```
+kubectl get deploy
+kubectl delete deploy nodeapp
+kubectl delete svc nodeapp
+```
+
+### Create new namespace
+```
+kubectl create namespace nodeapp
 ```
