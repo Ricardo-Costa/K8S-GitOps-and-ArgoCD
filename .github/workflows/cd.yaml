@@ -1,0 +1,19 @@
+name: CD
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: build image and push to docker hub
+        uses: docker/build-push-action@v1.1.0
+        with:
+          username: ricardocosta94
+          password: ${{secrets.DOCKER_PASSWORD}}
+          repository: ricardocosta94/kga
+          tags: ${{github.sha}}, latest
