@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: nodeapp
-  # type: ClusterIP
+    type: ClusterIP
   # sessionAffinity: None
   # sessionAffinityConfig:
   #   clientIP:
