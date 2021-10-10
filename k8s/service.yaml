@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: nodeapp
-    type: ClusterIP
+    type: NodePort
   # sessionAffinity: None
   # sessionAffinityConfig:
   #   clientIP:
@@ -18,4 +18,4 @@ spec:
     targetPort: 3000 
     # If you set the `spec.type` field to `NodePort` and you want a specific port number,
     # you can specify a value in the `spec.ports[*].nodePort` field.
-    # nodePort: 3000
+    nodePort: 3000
