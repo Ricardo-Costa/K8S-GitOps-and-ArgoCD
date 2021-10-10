@@ -67,3 +67,9 @@ kubectl delete svc nodeapp
 ```
 kubectl create namespace nodeapp
 ```
+
+
+### Start application by service and namespace
+```
+kubectl port-forward svc/nodeapp 3000:3000 -n nodeapp
+```
