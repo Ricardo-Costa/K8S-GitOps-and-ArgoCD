@@ -34,7 +34,7 @@ jobs:
       - name: update k8s
         run: |
           cd k8s
-          kustomize edit set image ricardocosta94/kga:${github.sha}
+          kustomize edit set image ricardocosta94/kga=ricardocosta94/kga:${github.sha}
           cat kustomization.yaml
 
       - name: commit
