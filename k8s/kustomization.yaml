@@ -8,5 +8,4 @@ namespace: nodeapp
 
 images:
 - name: ricardocosta94/kga
-  newName: ricardocosta94/kga
-  newTag: latest ## set new tags here
+  newTag: 1202cb808c19a1d45a895dd97c7c22ae649e9885
