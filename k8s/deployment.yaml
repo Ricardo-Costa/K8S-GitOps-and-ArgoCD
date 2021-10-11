@@ -9,8 +9,8 @@ spec:
   selector:
     matchLabels:
       app: nodeapp
-  replicas: 1
-  #replicas: 10
+  #replicas: 1
+  replicas: 2
   strategy:
     rollingUpdate:
       maxSurge: 25%
