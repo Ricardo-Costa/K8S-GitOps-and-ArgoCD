@@ -1,5 +1,6 @@
-# K8S-GitOps-and-ArgoCD
-K8S-GitOps-and-ArgoCD
+# K8S - GitOps - ArgoCD
+
+> This project show how build a **Continuous Deployment** with Kubernetes, GitHub Actions and AgorCD.
 
 ### Tools
 - Docker
